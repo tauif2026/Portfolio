@@ -1,0 +1,1160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Tauif - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+     <meta name="description" content="Explore the portfolio of Mohammed Tauif – Data Science student, C++ developer, Power BI analyst. View projects, skills, education, and contact details." />
+  
+  <!-- Meta Keywords (optional but dated) -->
+  <meta name="keywords" content="Mohammed Tauif, portfolio, data science, C++, Power BI, web developer, MCA, Python, projects" />
+  
+  <!-- Author -->
+  <meta name="author" content="Mohammed Tauif" />
+  
+  <!-- Open Graph Meta Tags (for social media sharing) -->
+  <meta property="og:title" content="Mohammed Tauif - Portfolio" />
+  <meta property="og:description" content="Showcasing my skills, projects, and education in data science and development." />
+  <meta property="og:image" content="https://yourdomain.com/preview.jpg" /> <!-- Replace with your actual image link -->
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mohammed Tauif - Portfolio" />
+  <meta name="twitter:description" content="A professional portfolio showcasing projects, skills, and academic background." />
+  <meta name="twitter:image" content="https://yourdomain.com/preview.jpg" />
+
+  <!-- Favicon -->
+  <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon" /> -->
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://tauif.com" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* Hide scrollbars */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overflow-x: hidden;
+        }
+        
+        /* Dynamic gradient background */
+        .main-bg {
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(120, 200, 255, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, 
+                    #0f0f23 0%,
+                    #1a1a2e 25%,
+                    #16213e 50%,
+                    #0f0f23 75%,
+                    #1a1a2e 100%
+                );
+            background-size: 100% 100%;
+            animation: gradientShift 20s ease infinite;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* Glass morphism effects */
+        .glass-card {
+            backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-nav {
+            backdrop-filter: blur(25px) saturate(200%);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Enhanced animations */
+        .floating-animation {
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(2deg); }
+            50% { transform: translateY(-30px) rotate(0deg); }
+            75% { transform: translateY(-15px) rotate(-2deg); }
+        }
+        
+        .glow-effect {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 0 30px rgba(102, 126, 234, 0.2),
+                0 0 60px rgba(102, 126, 234, 0.1),
+                0 0 100px rgba(102, 126, 234, 0.05);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glow-effect::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+        
+        .glow-effect:hover::before {
+            animation: shine 1.5s ease-in-out;
+            opacity: 1;
+        }
+        
+        .glow-effect:hover {
+            box-shadow: 
+                0 0 40px rgba(102, 126, 234, 0.4),
+                0 0 80px rgba(102, 126, 234, 0.2),
+                0 0 120px rgba(102, 126, 234, 0.1);
+            transform: translateY(-10px) scale(1.02);
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        /* Enhanced typing animation */
+        .typing-animation {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 4px solid;
+            border-image: linear-gradient(45deg, #667eea, #764ba2) 1;
+            animation: 
+                typing 6s steps(40, end) 1s both,
+                blink-caret 1s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #667eea }
+        }
+        
+        /* 3D card effects */
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-3d:hover {
+            transform: 
+                perspective(1000px) 
+                rotateX(5deg) 
+                rotateY(-5deg) 
+                translateY(-20px) 
+                translateZ(20px);
+        }
+        
+        /* Enhanced progress bars */
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            background-size: 200% 100%;
+            animation: 
+                progress-fill 3s ease-out forwards,
+                gradient-flow 3s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            animation: progress-shine 2s ease-in-out infinite;
+        }
+        
+        @keyframes progress-fill {
+            0% { width: 0%; }
+            100% { width: var(--width); }
+        }
+        
+        @keyframes gradient-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes progress-shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        /* Enhanced navigation */
+        .nav-link {
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: left 0.5s ease;
+            z-index: 1;
+        }
+        
+        .nav-link:hover::before {
+            left: 100%;
+        }
+        
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+        }
+        
+        /* Particle system */
+        .particle {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .particle-1 { animation: particle-float-1 25s infinite linear; }
+        .particle-2 { animation: particle-float-2 30s infinite linear; }
+        .particle-3 { animation: particle-float-3 35s infinite linear; }
+        
+        @keyframes particle-float-1 {
+            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) translateX(100px) rotate(360deg); opacity: 0; }
+        }
+        
+        @keyframes particle-float-2 {
+            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) translateX(-100px) rotate(-360deg); opacity: 0; }
+        }
+        
+        @keyframes particle-float-3 {
+            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) translateX(50px) rotate(180deg); opacity: 0; }
+        }
+        
+        /* Scroll progress */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            background-size: 200% 100%;
+            animation: gradient-flow 3s ease-in-out infinite;
+            transform-origin: left;
+            z-index: 1000;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+        }
+        
+        /* Section transitions */
+        .section-fade {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Enhanced buttons */
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            background-size: 200% 200%;
+            animation: gradient-flow 3s ease-in-out infinite;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* Enhanced social links */
+        .social-link {
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* Content container adjustments */
+        .content-container {
+            background: transparent;
+            min-height: 100vh;
+        }
+        
+        /* Enhanced profile image */
+        .profile-img {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-img::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            border-radius: 50%;
+            animation: profile-glow 4s ease-in-out infinite;
+        }
+        
+        @keyframes profile-glow {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+        
+        /* Enhanced technology tags */
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: left 0.5s ease;
+        }
+        
+        .tech-tag:hover::before {
+            left: 100%;
+        }
+        
+        .tech-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .fixed-nav {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+            
+            .content-section {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+        
+        /* Enhanced certificate cards */
+        .cert-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #667eea);
+            background-size: 400% 400%;
+            animation: gradient-flow 8s ease-in-out infinite;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .cert-card:hover::before {
+            opacity: 1;
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden">
+    <!-- Dynamic background -->
+    <div class="main-bg"></div>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scrollProgress"></div>
+    
+    <!-- Enhanced Floating Particles -->
+    <div class="particle particle-1" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="particle particle-2" style="left: 20%; animation-delay: 2s;"></div>
+    <div class="particle particle-3" style="left: 30%; animation-delay: 4s;"></div>
+    <div class="particle particle-1" style="left: 40%; animation-delay: 6s;"></div>
+    <div class="particle particle-2" style="left: 50%; animation-delay: 8s;"></div>
+    <div class="particle particle-3" style="left: 60%; animation-delay: 10s;"></div>
+    <div class="particle particle-1" style="left: 70%; animation-delay: 12s;"></div>
+    <div class="particle particle-2" style="left: 80%; animation-delay: 14s;"></div>
+    <div class="particle particle-3" style="left: 90%; animation-delay: 16s;"></div>
+    
+    <div class="flex min-h-screen">
+        <!-- Left Column - Fixed Navigation & Profile -->
+        <div class="fixed-nav fixed left-0 top-0 w-1/3 h-screen overflow-y-auto">
+            <div class="p-8 h-full flex flex-col">
+                <!-- Profile Section -->
+                <div class="text-center mb-8">
+                    <div class="relative inline-block">
+                        <div class="profile-img w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-lg floating-animation overflow-hidden">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilxfVcv99Gd8t_TC993FdXoL4NL8XVex3z1E8d9x-bAjutPQ4EaccJfDSWyJj76JeKQeZJNmgoTculU17RS_B4srdOaltoumaCUggmrrUaE1H2zkutGu7OK-rJEAwHs5e3xR6w5MzlWiSsNaUtqmov2PZQEZuIzBIzv05JPtJTPXih2zUo4msAV-mX7ug/s16000/WhatsApp%20Image%202025-07-06%20at%201.51.47%20PM%20(1).jpeg" 
+                                 alt="Profile Picture" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-green-400 to-green-500 rounded-full border-4 border-white shadow-lg">
+                           
+                        </div>
+                    </div>
+                    <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Mohammed Tauif</h1>
+                    <p class="text-xl opacity-90 typing-animation bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Data Analyst</p>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="flex-1 mb-8">
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#about" class="nav-link flex items-center p-4 rounded-xl glass-nav transition-all duration-300">
+                                <i class="fas fa-user mr-3 text-xl text-blue-400"></i>
+                                <span class="text-lg font-medium">About Me</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="nav-link flex items-center p-4 rounded-xl glass-nav transition-all duration-300">
+                                <i class="fas fa-code mr-3 text-xl text-purple-400"></i>
+                                <span class="text-lg font-medium">Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#academic" class="nav-link flex items-center p-4 rounded-xl glass-nav transition-all duration-300">
+                                <i class="fas fa-graduation-cap mr-3 text-xl text-green-400"></i>
+                                <span class="text-lg font-medium">Academic</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#certificates" class="nav-link flex items-center p-4 rounded-xl glass-nav transition-all duration-300">
+                                <i class="fas fa-certificate mr-3 text-xl text-yellow-400"></i>
+                                <span class="text-lg font-medium">Certificates</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Social Links -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-semibold mb-4 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Connect With Me</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/mohammed-tauif-776105248/" class="social-link w-12 h-12 rounded-full glass-nav flex items-center justify-center">
+                            <i class="fab fa-linkedin-in text-xl text-blue-400"></i>
+                        </a>
+                        <a href="https://github.com/tauif2026" class="social-link w-12 h-12 rounded-full glass-nav flex items-center justify-center">
+                            <i class="fab fa-github text-xl text-gray-400"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tauif2026/" class="social-link w-12 h-12 rounded-full glass-nav flex items-center justify-center">
+                            <i class="fab fa-twitter text-xl text-blue-400"></i>
+                        </a>
+                        <a href="https://x.com/Tauif2026" class="social-link w-12 h-12 rounded-full glass-nav flex items-center justify-center">
+                            <i class="fas fa-envelope text-xl text-red-400"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="mt-6 space-y-3">
+                        <div class="flex items-center glass-nav p-3 rounded-lg">
+                            <i class="fas fa-envelope mr-3 text-sm text-red-400"></i>
+                            <span class="text-sm">mohammedtauif208@gmail.com</span>
+                        </div>
+                        <div class="flex items-center glass-nav p-3 rounded-lg">
+                            <i class="fas fa-phone mr-3 text-sm text-green-400"></i>
+                            <span class="text-sm">+91 9119343797</span>
+                        </div>
+                        <div class="flex items-center glass-nav p-3 rounded-lg">
+                            <i class="fas fa-map-marker-alt mr-3 text-sm text-blue-400"></i>
+                            <span class="text-sm">Bengaluru, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column - Scrollable Content -->
+        <div class="content-section content-container w-2/3 ml-[33.333333%]">
+            <div class="p-8 space-y-20">
+                <!-- About Me Section -->
+                <section id="about" class="section-fade">
+                    <div class="card-3d glass-card rounded-3xl p-8 glow-effect">
+                        <h2 class="text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">About Me</h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-xl leading-relaxed mb-6 text-gray-300">
+                                Hi, I'm Mohammed Tauif — a passionate and results-driven tech enthusiast with a strong foundation in <span class="text-blue-400 font-semibold">Data Science</span>, <span class="text-purple-400 font-semibold">C++</span>, <span class="text-green-400 font-semibold">SQL</span>, <span class="text-yellow-400 font-semibold">Power BI</span>, and <span class="text-pink-400 font-semibold">full-stack development</span>. With hands-on experience in building real-world projects, contributing to problem-solving platforms like LeetCode, and creating tools like Spend Wise, my goal is to build innovative, scalable, and impactful digital solutions.
+                            </p>
+                            <p class="text-xl leading-relaxed mb-6 text-gray-300">
+                                I hold a Master's degree in Computer Applications with a specialization in Data Science and have a deep interest in <span class="text-cyan-400 font-semibold">machine learning</span>, <span class="text-indigo-400 font-semibold">backend development</span>, and <span class="text-orange-400 font-semibold">system design</span>. I enjoy working on meaningful projects that not only solve problems but also add value to people's lives.
+                            </p>
+                            <p class="text-xl leading-relaxed mb-8 text-gray-300">
+                                I'm continuously learning and evolving, currently focusing on DSA using C++, open-source contributions for GSoC, and exploring cloud and big data technologies. My journey is driven by curiosity, discipline, and a commitment to creating tech that makes a difference.
+                            </p>
+                        </div>
+                        
+                        <!-- Skills Section -->
+                        <div class="mt-10">
+                            <h3 class="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Technical Skills</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="space-y-6">
+                                    <div class="glass-card p-4 rounded-xl">
+                                        <div class="flex justify-between mb-3">
+                                            <span class="font-semibold text-lg">C++</span>
+                                            <span class="text-sm text-blue-400 font-medium">90%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-700 rounded-full h-3">
+                                            <div class="progress-bar h-3 rounded-full" style="--width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="glass-card p-4 rounded-xl">
+                                        <div class="flex justify-between mb-3">
+                                            <span class="font-semibold text-lg">Python</span>
+                                            <span class="text-sm text-green-400 font-medium">85%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-700 rounded-full h-3">
+                                            <div class="progress-bar h-3 rounded-full" style="--width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="glass-card p-4 rounded-xl">
+                                        <div class="flex justify-between mb-3">
+                                            <span class="font-semibold text-lg">SQL</span>
+                                            <span class="text-sm text-purple-400 font-medium">80%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-700 rounded-full h-3">
+                                            <div class="progress-bar h-3 rounded-full" style="--width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-6">
+                                    <div class="glass-card p-4 rounded-xl">
+                                        <div class="flex justify-between mb-3">
+                                            <span class="font-semibold text-lg">PowerBI</span>
+                                            <span class="text-sm text-yellow-400 font-medium">75%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-700 rounded-full h-3">
+                                            <div class="progress-bar h-3 rounded-full" style="--width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="glass-card p-4 rounded-xl">
+                                        <div class="flex justify-between mb-3">
+                                            <span class="font-semibold text-lg">MongoDB</span>
+                                            <span class="text-sm text-green-400 font-medium">70%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-700 rounded-full h-3">
+                                            <div class="progress-bar h-3 rounded-full" style="--width: 70%"></div>
+                                        </div>
+                                    </div>
+                                        <div class="flex justify-between mb-2">
+                                            <span class="font-medium">Pandas & NumPy</span>
+                                            <span class="text-sm opacity-75">80%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-600 rounded-full h-2">
+                                            <div class="progress-bar h-2 rounded-full" style="--width: 65%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Projects Section -->
+                <section id="projects" class="section-fade">
+                    <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Projects</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="mb-4">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" 
+                                     alt="Project 1" 
+                                     class="w-full h-48 object-cover rounded-lg mb-4">
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Credit Card Dashboard</h3>
+                            <p class="text-gray-300 mb-4">Created an interactive Power BI dashboard to analyze credit card transactions, customer demographics, and spending behavior using filters, KPIs, and custom visuals for actionable insights.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-300 rounded-full text-sm">Power BI</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-300 rounded-full text-sm">MySql</span>
+                                <span class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-300 rounded-full text-sm">DAX</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/tauif2026/Credit_Card_Financial-dashboard" target="_blank" class="flex items-center text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="mb-4">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop" 
+                                     alt="Project 2" 
+                                     class="w-full h-48 object-cover rounded-lg mb-4">
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Task Management App</h3>
+                            <p class="text-gray-300 mb-4">A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-300 rounded-full text-sm">Vue.js</span>
+                                <span class="px-3 py-1 bg-yellow-500 bg-opacity-20 text-yellow-300 rounded-full text-sm">Firebase</span>
+                                <span class="px-3 py-1 bg-red-500 bg-opacity-20 text-red-300 rounded-full text-sm">Socket.io</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="flex items-center text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="mb-4">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=200&fit=crop" 
+                                     alt="Project 3" 
+                                     class="w-full h-48 object-cover rounded-lg mb-4">
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Weather Analytics Dashboard</h3>
+                            <p class="text-gray-300 mb-4">A data visualization dashboard that displays weather patterns and analytics using Chart.js and real-time weather APIs.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-orange-500 bg-opacity-20 text-orange-300 rounded-full text-sm">Chart.js</span>
+                                <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-300 rounded-full text-sm">API Integration</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-300 rounded-full text-sm">Express</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="flex items-center text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="mb-4">
+                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=200&fit=crop" 
+                                     alt="Project 4" 
+                                     class="w-full h-48 object-cover rounded-lg mb-4">
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Social Media Platform</h3>
+                            <p class="text-gray-300 mb-4">A full-featured social media platform with user profiles, posts, comments, likes, and real-time messaging functionality.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-300 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-300 rounded-full text-sm">GraphQL</span>
+                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-300 rounded-full text-sm">PostgreSQL</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="flex items-center text-gray-400 hover:text-gray-300 transition-colors">
+                                    <i class="fab fa-github mr-2"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Academic Section -->
+                <section id="academic" class="section-fade">
+                    <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Academic Background</h2>
+                    <div class="space-y-6">
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-graduation-cap text-2xl text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-2">Master of Science in Computer Science</h3>
+                                    <p class="text-blue-400 font-medium mb-2">Stanford University</p>
+                                    <p class="text-gray-400 mb-3">2020 - 2022 | GPA: 3.8/4.0</p>
+                                    <p class="text-gray-300">Specialized in Machine Learning and Software Engineering. Thesis on "Optimization of Deep Learning Models for Real-time Applications"</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-university text-2xl text-white"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-2">Bachelor of Technology in Computer Science</h3>
+                                    <p class="text-green-400 font-medium mb-2">MIT</p>
+                                    <p class="text-gray-400 mb-3">2016 - 2020 | GPA: 3.9/4.0</p>
+                                    <p class="text-gray-300">Magna Cum Laude. Focus on Data Structures, Algorithms, and Software Development. President of Computer Science Student Association.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience Section -->
+                        <div class="mt-12">
+                            <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Professional Experience</h3>
+                            <div class="space-y-6">
+                                <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-briefcase text-2xl text-white"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="text-xl font-bold mb-2">Senior Full Stack Developer</h4>
+                                            <p class="text-purple-400 font-medium mb-2">Tech Solutions Inc.</p>
+                                            <p class="text-gray-400 mb-3">Jan 2023 - Present</p>
+                                            <ul class="text-gray-300 space-y-1">
+                                                <li>• Led development of microservices architecture serving 1M+ users</li>
+                                                <li>• Improved application performance by 40% through optimization</li>
+                                                <li>• Mentored 5 junior developers and conducted technical interviews</li>
+                                                <li>• Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-code text-2xl text-white"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="text-xl font-bold mb-2">Frontend Developer</h4>
+                                            <p class="text-blue-400 font-medium mb-2">StartupXYZ</p>
+                                            <p class="text-gray-400 mb-3">Jun 2021 - Dec 2022</p>
+                                            <ul class="text-gray-300 space-y-1">
+                                                <li>• Developed responsive web applications using React and Vue.js</li>
+                                                <li>• Collaborated with UI/UX designers to implement pixel-perfect designs</li>
+                                                <li>• Optimized web performance achieving 95+ Lighthouse scores</li>
+                                                <li>• Participated in agile development processes and code reviews</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Certificates Section -->
+                <section id="certificates" class="section-fade">
+                    <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">Certifications</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-certificate text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">AWS Certified Solutions Architect</h3>
+                                    <p class="text-gray-400">Amazon Web Services</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-3">Professional level certification demonstrating expertise in designing distributed systems on AWS.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Issued: March 2023</span>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-certificate text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">Google Cloud Professional</h3>
+                                    <p class="text-gray-400">Google Cloud Platform</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-3">Advanced certification in cloud architecture and development on Google Cloud Platform.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Issued: January 2023</span>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-certificate text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">MongoDB Certified Developer</h3>
+                                    <p class="text-gray-400">MongoDB University</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-3">Certification in MongoDB database design, development, and administration.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Issued: November 2022</span>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-certificate text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">React Professional Certificate</h3>
+                                    <p class="text-gray-400">Meta (Facebook)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-3">Advanced React development certification including hooks, context, and performance optimization.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Issued: September 2022</span>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-red-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-certificate text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">Kubernetes Administrator</h3>
+                                    <p class="text-gray-400">Cloud Native Computing Foundation</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-3">Certified Kubernetes Administrator (CKA) demonstrating skills in cluster management and deployment.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Issued: July 2022</span>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-certificate text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">Machine Learning Engineer</h3>
+                                    <p class="text-gray-400">Coursera & Stanford</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-3">Comprehensive machine learning certification covering algorithms, neural networks, and deployment.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400">Issued: May 2022</span>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Action -->
+                    <div class="mt-16 text-center">
+                        <div class="card-hover bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 glow-effect">
+                            <h3 class="text-2xl font-bold mb-4">Let's Work Together!</h3>
+                            <p class="text-lg mb-6 opacity-90">I'm always open to discussing new opportunities and exciting projects.</p>
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="#" class="px-8 py-3 bg-white text-purple-600 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                                    Download Resume
+                                </a>
+                                <a href="#" class="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                                    Get In Touch
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update active navigation
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('bg-white', 'bg-opacity-20');
+                    });
+                    this.classList.add('bg-white', 'bg-opacity-20');
+                }
+            });
+        });
+        
+        // Scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.transform = `scaleX(${scrollPercent / 100})`;
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.section-fade').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Add active state to navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    currentSection = section.id;
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('bg-white', 'bg-opacity-20');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('bg-white', 'bg-opacity-20');
+                }
+            });
+        });
+        
+        // Animate progress bars when they come into view
+        const progressBars = document.querySelectorAll('.progress-bar');
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    const width = bar.style.getPropertyValue('--width');
+                    bar.style.width = width;
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        progressBars.forEach(bar => {
+            progressObserver.observe(bar);
+        });
+        
+        // Add floating animation delay to profile image
+        const profileImage = document.querySelector('.floating-animation');
+        if (profileImage) {
+            profileImage.style.animationDelay = '0.5s';
+        }
+        
+        // Add parallax effect to particles
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const particles = document.querySelectorAll('.particle');
+            
+            particles.forEach((particle, index) => {
+                const speed = 0.5 + (index * 0.1);
+                particle.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+        
+        // Add typing animation restart on scroll
+        let typingElement = document.querySelector('.typing-animation');
+        if (typingElement) {
+            const restartTyping = () => {
+                typingElement.style.animation = 'none';
+                typingElement.offsetHeight; // Trigger reflow
+                typingElement.style.animation = 'typing 4s steps(40, end), blink-caret 0.75s step-end infinite';
+            };
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY < 100) {
+                    restartTyping();
+                }
+            });
+        }
+        
+        // Add hover effect to cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'perspective(1000px) rotateX(5deg) translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'perspective(1000px) rotateX(0deg) translateY(0px)';
+            });
+        });
+        
+        // Add click animation to buttons
+        document.querySelectorAll('a, button').forEach(element => {
+            element.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
+
