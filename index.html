@@ -1,1160 +1,1482 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Tauif - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-     <meta name="description" content="Explore the portfolio of Mohammed Tauif – Data Science student, C++ developer, Power BI analyst. View projects, skills, education, and contact details." />
-  
-  <!-- Meta Keywords (optional but dated) -->
-  <meta name="keywords" content="Mohammed Tauif, portfolio, data science, C++, Power BI, web developer, MCA, Python, projects" />
-  
-  <!-- Author -->
-  <meta name="author" content="Mohammed Tauif" />
-  
-  <!-- Open Graph Meta Tags (for social media sharing) -->
-  <meta property="og:title" content="Mohammed Tauif - Portfolio" />
-  <meta property="og:description" content="Showcasing my skills, projects, and education in data science and development." />
-  <meta property="og:image" content="https://yourdomain.com/preview.jpg" /> <!-- Replace with your actual image link -->
-  <meta property="og:url" content="https://yourdomain.com" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mohammed Tauif - Portfolio" />
-  <meta name="twitter:description" content="A professional portfolio showcasing projects, skills, and academic background." />
-  <meta name="twitter:image" content="https://yourdomain.com/preview.jpg" />
-
-  <!-- Favicon -->
-  <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon" /> -->
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://tauif.com" />
+    <title>Mohammed Tauif - Data Analyst Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        
-        * {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        /* Hide scrollbars */
-        ::-webkit-scrollbar {
-            display: none;
-        }
-        
-        body {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-            overflow-x: hidden;
-        }
-        
-        /* Dynamic gradient background */
-        .main-bg {
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(120, 200, 255, 0.3) 0%, transparent 50%),
-                linear-gradient(135deg, 
-                    #0f0f23 0%,
-                    #1a1a2e 25%,
-                    #16213e 50%,
-                    #0f0f23 75%,
-                    #1a1a2e 100%
-                );
-            background-size: 100% 100%;
-            animation: gradientShift 20s ease infinite;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        /* Glass morphism effects */
-        .glass-card {
-            backdrop-filter: blur(20px) saturate(180%);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.1),
-                0 0 0 1px rgba(255, 255, 255, 0.05),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-        
-        .glass-nav {
-            backdrop-filter: blur(25px) saturate(200%);
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.15),
-                0 0 0 1px rgba(255, 255, 255, 0.08),
-                inset 0 1px 0 rgba(255, 255, 255, 0.15);
-        }
-        
-        /* Enhanced animations */
-        .floating-animation {
-            animation: float 8s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-15px) rotate(2deg); }
-            50% { transform: translateY(-30px) rotate(0deg); }
-            75% { transform: translateY(-15px) rotate(-2deg); }
-        }
-        
-        .glow-effect {
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 0 30px rgba(102, 126, 234, 0.2),
-                0 0 60px rgba(102, 126, 234, 0.1),
-                0 0 100px rgba(102, 126, 234, 0.05);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .glow-effect::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                45deg,
-                transparent,
-                rgba(255, 255, 255, 0.1),
-                transparent
-            );
-            transform: rotate(45deg);
-            transition: all 0.6s ease;
-            opacity: 0;
-        }
-        
-        .glow-effect:hover::before {
-            animation: shine 1.5s ease-in-out;
-            opacity: 1;
-        }
-        
-        .glow-effect:hover {
-            box-shadow: 
-                0 0 40px rgba(102, 126, 234, 0.4),
-                0 0 80px rgba(102, 126, 234, 0.2),
-                0 0 120px rgba(102, 126, 234, 0.1);
-            transform: translateY(-10px) scale(1.02);
-        }
-        
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-        
-        /* Enhanced typing animation */
-        .typing-animation {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 4px solid;
-            border-image: linear-gradient(45deg, #667eea, #764ba2) 1;
-            animation: 
-                typing 6s steps(40, end) 1s both,
-                blink-caret 1s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #667eea }
-        }
-        
-        /* 3D card effects */
-        .card-3d {
-            transform-style: preserve-3d;
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .card-3d:hover {
-            transform: 
-                perspective(1000px) 
-                rotateX(5deg) 
-                rotateY(-5deg) 
-                translateY(-20px) 
-                translateZ(20px);
-        }
-        
-        /* Enhanced progress bars */
-        .progress-bar {
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            background-size: 200% 100%;
-            animation: 
-                progress-fill 3s ease-out forwards,
-                gradient-flow 3s ease-in-out infinite;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .progress-bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.4),
-                transparent
-            );
-            animation: progress-shine 2s ease-in-out infinite;
-        }
-        
-        @keyframes progress-fill {
-            0% { width: 0%; }
-            100% { width: var(--width); }
-        }
-        
-        @keyframes gradient-flow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes progress-shine {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
-        /* Enhanced navigation */
-        .nav-link {
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-        }
-        
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.2),
-                transparent
-            );
-            transition: left 0.5s ease;
-            z-index: 1;
-        }
-        
-        .nav-link:hover::before {
-            left: 100%;
-        }
-        
-        .nav-link.active {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateX(10px);
-        }
-        
-        /* Particle system */
-        .particle {
-            position: fixed;
-            width: 3px;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .particle-1 { animation: particle-float-1 25s infinite linear; }
-        .particle-2 { animation: particle-float-2 30s infinite linear; }
-        .particle-3 { animation: particle-float-3 35s infinite linear; }
-        
-        @keyframes particle-float-1 {
-            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-10vh) translateX(100px) rotate(360deg); opacity: 0; }
-        }
-        
-        @keyframes particle-float-2 {
-            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-10vh) translateX(-100px) rotate(-360deg); opacity: 0; }
-        }
-        
-        @keyframes particle-float-3 {
-            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-10vh) translateX(50px) rotate(180deg); opacity: 0; }
-        }
-        
-        /* Scroll progress */
-        .scroll-indicator {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-            background-size: 200% 100%;
-            animation: gradient-flow 3s ease-in-out infinite;
-            transform-origin: left;
-            z-index: 1000;
-            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
-        }
-        
-        /* Section transitions */
-        .section-fade {
-            opacity: 0;
-            transform: translateY(60px);
-            transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .section-fade.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Enhanced buttons */
-        .btn-primary {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            background-size: 200% 200%;
-            animation: gradient-flow 3s ease-in-out infinite;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.3),
-                transparent
-            );
-            transition: left 0.5s ease;
-        }
-        
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-        }
-        
-        /* Enhanced social links */
-        .social-link {
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .social-link:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-        }
-        
-        /* Content container adjustments */
-        .content-container {
-            background: transparent;
-            min-height: 100vh;
-        }
-        
-        /* Enhanced profile image */
-        .profile-img {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .profile-img::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                45deg,
-                transparent,
-                rgba(255, 255, 255, 0.1),
-                transparent
-            );
-            border-radius: 50%;
-            animation: profile-glow 4s ease-in-out infinite;
-        }
-        
-        @keyframes profile-glow {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(180deg); }
-        }
-        
-        /* Enhanced technology tags */
-        .tech-tag {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .tech-tag::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.2),
-                transparent
-            );
-            transition: left 0.5s ease;
-        }
-        
-        .tech-tag:hover::before {
-            left: 100%;
-        }
-        
-        .tech-tag:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .fixed-nav {
-                position: static;
-                width: 100%;
-                height: auto;
-            }
-            
-            .content-section {
-                margin-left: 0;
-                width: 100%;
-            }
-        }
-        
-        /* Enhanced certificate cards */
-        .cert-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cert-card::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #667eea);
-            background-size: 400% 400%;
-            animation: gradient-flow 8s ease-in-out infinite;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .cert-card:hover::before {
-            opacity: 1;
-        }
-        
-        .cert-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-        }
+        :root {
+    /* Light theme colors */
+    --primary-color: #0969da;
+    --secondary-color: #1f883d;
+    --accent-color: #cf222e;
+    --text-primary: #1f2328;
+    --text-secondary: #656d76;
+    --text-muted: #8b949e;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f8fa;
+    --bg-tertiary: #ffffff;
+    --border-color: #d1d9e0;
+    --border-muted: #d8dee4;
+    --shadow-small: 0 1px 3px rgba(16, 22, 26, 0.1);
+    --shadow-medium: 0 4px 12px rgba(16, 22, 26, 0.15);
+    --shadow-large: 0 8px 24px rgba(16, 22, 26, 0.2);
+    --gradient-hero: linear-gradient(135deg, #0969da 0%, #1f883d 100%);
+    --gradient-card: linear-gradient(135deg, #f6f8fa 0%, #ffffff 100%);
+}
+
+[data-theme="dark"] {
+    /* Dark theme colors */
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --text-muted: #6e7681;
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    --border-color: #30363d;
+    --border-muted: #21262d;
+    --shadow-small: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-large: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --gradient-hero: linear-gradient(135deg, #0969da 0%, #1f883d 100%);
+    --gradient-card: linear-gradient(135deg, #161b22 0%, #21262d 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-medium);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: var(--shadow-large);
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-muted);
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+[data-theme="dark"] .navbar {
+    background: rgba(13, 17, 23, 0.8);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--text-primary) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 8px;
+    color: var(--text-secondary) !important;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+    background-color: var(--bg-secondary);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    background-color: var(--bg-secondary);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: var(--gradient-hero);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff08" points="0,1000 1000,0 1000,1000"/></svg>');
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+    animation: slideInUp 1s ease-out;
+}
+
+.hero .lead {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    animation: slideInUp 1s ease-out 0.2s both;
+    font-weight: 400;
+}
+
+.hero .btn {
+    animation: slideInUp 1s ease-out 0.4s both;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-primary-custom {
+    background: var(--accent-color);
+    border: none;
+    padding: 12px 24px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+}
+
+.btn-primary-custom:hover {
+    background: #a40e26;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-medium);
+    color: white;
+}
+
+.btn-outline-custom {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    padding: 12px 24px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+.btn-outline-custom:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Section Styling */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* About Section */
+.about {
+    background: var(--bg-secondary);
+}
+
+.about-content {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.stats {
+    background: var(--bg-tertiary);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-top: 24px;
+    transition: all 0.3s ease;
+}
+
+.stats:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 16px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: block;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+/* Skills Section */
+.skills {
+    background: var(--bg-primary);
+}
+
+.skill-category {
+    background: var(--bg-tertiary);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.skill-category h4 {
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.skill-item i {
+    font-size: 1.25rem;
+    margin-right: 12px;
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.skill-progress {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.progress {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-muted);
+}
+
+.progress-bar {
+    border-radius: 3px;
+    transition: width 2s ease-in-out;
+    background: var(--primary-color);
+}
+
+/* Projects Section */
+.projects {
+    background: var(--bg-secondary);
+}
+
+.project-card {
+    background: var(--bg-tertiary);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-large);
+    border-color: var(--border-muted);
+}
+
+.project-image {
+    height: 200px;
+    background: var(--gradient-hero);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image i {
+    font-size: 3rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.project-content {
+    padding: 24px;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.project-description {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.tech-tag {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+.project-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.project-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Experience Section */
+.experience {
+    background: var(--bg-primary);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 24px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+    background: var(--bg-tertiary);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-left: 24px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateX(4px);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 24px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 2px solid var(--bg-primary);
+}
+
+.timeline-date {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.timeline-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 4px 0;
+    color: var(--text-primary);
+}
+
+.timeline-company {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.timeline-item p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.timeline-item ul {
+    color: var(--text-secondary);
+    font-size: 14px;
+    padding-left: 16px;
+}
+
+.timeline-item li {
+    margin-bottom: 4px;
+}
+
+/* Contact Section */
+.contact {
+    background: var(--gradient-hero);
+    color: white;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact .section-title::after {
+    background: white;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 32px;
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+.contact-info {
+    padding: 32px 0;
+}
+
+.contact-info h3 {
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin-bottom: 24px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-item i {
+    font-size: 1.25rem;
+    margin-right: 16px;
+    width: 24px;
+    opacity: 0.9;
+}
+
+.contact-item div {
+    font-size: 14px;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.social-links {
+    margin-top: 24px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 1rem;
+    margin-right: 12px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Footer */
+.footer {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .hero .lead {
+        font-size: 1.1rem;
+    }
+    
+    .btn-outline-custom {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .timeline {
+        padding-left: 0;
+    }
+    
+    .timeline::before {
+        display: none;
+    }
+    
+    .timeline-item {
+        margin-left: 0;
+    }
+    
+    .timeline-item::before {
+        display: none;
+    }
+    
+    .theme-toggle {
+        right: 16px;
+        width: 44px;
+        height: 44px;
+    }
+    
+    .theme-toggle i {
+        font-size: 1.1rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.6s ease;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Smooth transitions for theme switching */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
     </style>
 </head>
-<body class="text-white overflow-x-hidden">
-    <!-- Dynamic background -->
-    <div class="main-bg"></div>
-    
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-indicator" id="scrollProgress"></div>
-    
-    <!-- Enhanced Floating Particles -->
-    <div class="particle particle-1" style="left: 10%; animation-delay: 0s;"></div>
-    <div class="particle particle-2" style="left: 20%; animation-delay: 2s;"></div>
-    <div class="particle particle-3" style="left: 30%; animation-delay: 4s;"></div>
-    <div class="particle particle-1" style="left: 40%; animation-delay: 6s;"></div>
-    <div class="particle particle-2" style="left: 50%; animation-delay: 8s;"></div>
-    <div class="particle particle-3" style="left: 60%; animation-delay: 10s;"></div>
-    <div class="particle particle-1" style="left: 70%; animation-delay: 12s;"></div>
-    <div class="particle particle-2" style="left: 80%; animation-delay: 14s;"></div>
-    <div class="particle particle-3" style="left: 90%; animation-delay: 16s;"></div>
-    
-    <div class="flex min-h-screen">
-        <!-- Left Column - Fixed Navigation & Profile -->
-        <div class="fixed-nav fixed left-0 top-0 w-1/3 h-screen overflow-y-auto">
-            <div class="p-8 h-full flex flex-col">
-                <!-- Profile Section -->
-                <div class="text-center mb-8">
-                    <div class="relative inline-block">
-                        <div class="profile-img w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-lg floating-animation overflow-hidden">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilxfVcv99Gd8t_TC993FdXoL4NL8XVex3z1E8d9x-bAjutPQ4EaccJfDSWyJj76JeKQeZJNmgoTculU17RS_B4srdOaltoumaCUggmrrUaE1H2zkutGu7OK-rJEAwHs5e3xR6w5MzlWiSsNaUtqmov2PZQEZuIzBIzv05JPtJTPXih2zUo4msAV-mX7ug/s16000/WhatsApp%20Image%202025-07-06%20at%201.51.47%20PM%20(1).jpeg" 
-                                 alt="Profile Picture" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-green-400 to-green-500 rounded-full border-4 border-white shadow-lg">
-                           
+<body>
+    <!-- Dark Mode Toggle -->
+<div class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon" id="themeIcon"></i>
+</div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Mohammed Tauif</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>Data Analyst & Insights Specialist</h1>
+                        <p class="lead">Transforming complex data into actionable business insights through advanced analytics, visualization, and statistical modeling.</p>
+                        <a href="#projects" class="btn-primary-custom">View My Work</a>
+                        <a href="#contact" class="btn-outline-custom">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center" data-aos="fade-left">
+                        <i class="fas fa-chart-line" style="font-size: 15rem; color: rgba(255,255,255,0.1);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-content">
+                        <p>I'm a passionate data analyst with over 5 years of experience in transforming raw data into meaningful insights that drive business decisions. My expertise spans across statistical analysis, data visualization, machine learning, and business intelligence.</p>
+                        
+                        <p>I specialize in working with large datasets, creating compelling visualizations, and building predictive models that help organizations understand their customers, optimize operations, and identify new opportunities.</p>
+                        
+                        <p>When I'm not analyzing data, you can find me exploring new visualization techniques, contributing to open-source projects, or sharing insights through technical writing and speaking at data science conferences.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="stats">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="50">0</span>
+                                    <div class="stat-label">Projects Completed</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="5">0</span>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="25">0</span>
+                                    <div class="stat-label">Happy Clients</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="100">0</span>
+                                    <div class="stat-label">Reports Generated</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Mohammed Tauif</h1>
-                    <p class="text-xl opacity-90 typing-animation bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Data Analyst</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="skill-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" data-width="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                            <div class="skill-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" data-width="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-r-project"></i>
+                            <span>R</span>
+                            <div class="skill-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" data-width="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Navigation Menu -->
-                <nav class="flex-1 mb-8">
-                    <ul class="space-y-4">
-                        <li>
-                            <a href="#about" class="nav-link flex items-center p-4 rounded-xl glass-nav transition-all duration-300">
-                                <i class="fas fa-user mr-3 text-xl text-blue-400"></i>
-                                <span class="text-lg font-medium">About Me</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#projects" class="nav-link flex items-center p-4 rounded-xl glass-nav transition-all duration-300">
-                                <i class="fas fa-code mr-3 text-xl text-purple-400"></i>
-                                <span class="text-lg font-medium">Projects</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#academic" class="nav-link flex items-center p-4 rounded-xl glass-nav transition-all duration-300">
-                                <i class="fas fa-graduation-cap mr-3 text-xl text-green-400"></i>
-                                <span class="text-lg font-medium">Academic</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#certificates" class="nav-link flex items-center p-4 rounded-xl glass-nav transition-all duration-300">
-                                <i class="fas fa-certificate mr-3 text-xl text-yellow-400"></i>
-                                <span class="text-lg font-medium">Certificates</span>
-                            </a>
-                        </li>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-chart-bar"></i> Analytics Tools</h4>
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
+                            <span>Tableau</span>
+                            <div class="skill-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" data-width="92"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Power BI</span>
+                            <div class="skill-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" data-width="88"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-file-excel"></i>
+                            <span>Excel</span>
+                            <div class="skill-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" data-width="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-brain"></i> Machine Learning</h4>
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Scikit-learn</span>
+                            <div class="skill-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" data-width="87"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>TensorFlow</span>
+                            <div class="skill-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Statistics</span>
+                            <div class="skill-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" data-width="93"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-commerce Sales Analysis</h3>
+                            <p class="project-description">Comprehensive analysis of online retail data to identify sales patterns, customer behavior, and revenue optimization opportunities.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Tableau</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image" style="background: var(--gradient-hero);">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Healthcare Data Dashboard</h3>
+                            <p class="project-description">Interactive dashboard for healthcare providers to track patient outcomes, resource utilization, and operational efficiency metrics.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">DAX</span>
+                                <span class="tech-tag">Excel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Stock Market Prediction</h3>
+                            <p class="project-description">Machine learning model to predict stock price movements using historical data, technical indicators, and sentiment analysis.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Matplotlib</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Customer Segmentation</h3>
+                            <p class="project-description">Advanced customer segmentation analysis using clustering algorithms to identify distinct customer groups for targeted marketing.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">K-Means</span>
+                                <span class="tech-tag">Seaborn</span>
+                                <span class="tech-tag">Plotly</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-card">
+                        <div class="project-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Social Media Analytics</h3>
+                            <p class="project-description">Comprehensive analysis of social media engagement metrics, sentiment analysis, and trend identification for brand monitoring.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">NLTK</span>
+                                <span class="tech-tag">Twitter API</span>
+                                <span class="tech-tag">Tableau</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-card">
+                        <div class="project-image" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Supply Chain Optimization</h3>
+                            <p class="project-description">Data-driven approach to optimize supply chain operations, reduce costs, and improve delivery performance through predictive analytics.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">R</span>
+                                <span class="tech-tag">Shiny</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">ggplot2</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-date">2022 - Present</div>
+                    <h3 class="timeline-title">Senior Data Analyst</h3>
+                    <div class="timeline-company">TechCorp Solutions</div>
+                    <p>Lead data analysis initiatives for enterprise clients, developing predictive models and automated reporting systems. Managed a team of 3 junior analysts and collaborated with cross-functional teams to deliver data-driven solutions.</p>
+                    <ul>
+                        <li>Increased reporting efficiency by 40% through automation</li>
+                        <li>Developed machine learning models with 85% accuracy</li>
+                        <li>Led data migration project for 500GB+ datasets</li>
                     </ul>
-                </nav>
+                </div>
                 
-                <!-- Social Links -->
-                <div class="space-y-4">
-                    <h3 class="text-xl font-semibold mb-4 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Connect With Me</h3>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/mohammed-tauif-776105248/" class="social-link w-12 h-12 rounded-full glass-nav flex items-center justify-center">
-                            <i class="fab fa-linkedin-in text-xl text-blue-400"></i>
-                        </a>
-                        <a href="https://github.com/tauif2026" class="social-link w-12 h-12 rounded-full glass-nav flex items-center justify-center">
-                            <i class="fab fa-github text-xl text-gray-400"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tauif2026/" class="social-link w-12 h-12 rounded-full glass-nav flex items-center justify-center">
-                            <i class="fab fa-twitter text-xl text-blue-400"></i>
-                        </a>
-                        <a href="https://x.com/Tauif2026" class="social-link w-12 h-12 rounded-full glass-nav flex items-center justify-center">
-                            <i class="fas fa-envelope text-xl text-red-400"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Contact Info -->
-                    <div class="mt-6 space-y-3">
-                        <div class="flex items-center glass-nav p-3 rounded-lg">
-                            <i class="fas fa-envelope mr-3 text-sm text-red-400"></i>
-                            <span class="text-sm">mohammedtauif208@gmail.com</span>
-                        </div>
-                        <div class="flex items-center glass-nav p-3 rounded-lg">
-                            <i class="fas fa-phone mr-3 text-sm text-green-400"></i>
-                            <span class="text-sm">+91 9119343797</span>
-                        </div>
-                        <div class="flex items-center glass-nav p-3 rounded-lg">
-                            <i class="fas fa-map-marker-alt mr-3 text-sm text-blue-400"></i>
-                            <span class="text-sm">Bengaluru, India</span>
-                        </div>
-                    </div>
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-date">2020 - 2022</div>
+                    <h3 class="timeline-title">Data Analyst</h3>
+                    <div class="timeline-company">DataInsights Inc.</div>
+                    <p>Performed comprehensive data analysis for retail and e-commerce clients, creating interactive dashboards and conducting statistical analysis to support business decision-making.</p>
+                    <ul>
+                        <li>Built 20+ interactive Tableau dashboards</li>
+                        <li>Improved data quality by implementing validation processes</li>
+                        <li>Conducted A/B testing for marketing campaigns</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="timeline-date">2019 - 2020</div>
+                    <h3 class="timeline-title">Junior Data Analyst</h3>
+                    <div class="timeline-company">StartupAnalytics</div>
+                    <p>Supported senior analysts in data collection, cleaning, and basic analysis tasks. Gained experience with various data sources and analytical tools while contributing to client projects.</p>
+                    <ul>
+                        <li>Processed and cleaned datasets with 1M+ records</li>
+                        <li>Created automated data collection scripts</li>
+                        <li>Assisted in developing KPI tracking systems</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-date">2018 - 2019</div>
+                    <h3 class="timeline-title">Data Analyst Intern</h3>
+                    <div class="timeline-company">BigData Corp</div>
+                    <p>Completed internship program focusing on data analysis fundamentals, statistical methods, and business intelligence tools. Worked on real-world projects under senior analyst supervision.</p>
+                    <ul>
+                        <li>Completed 6-month intensive training program</li>
+                        <li>Contributed to 5 client projects</li>
+                        <li>Earned certification in SQL and Excel</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
-        <!-- Right Column - Scrollable Content -->
-        <div class="content-section content-container w-2/3 ml-[33.333333%]">
-            <div class="p-8 space-y-20">
-                <!-- About Me Section -->
-                <section id="about" class="section-fade">
-                    <div class="card-3d glass-card rounded-3xl p-8 glow-effect">
-                        <h2 class="text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">About Me</h2>
-                        <div class="prose prose-lg max-w-none">
-                            <p class="text-xl leading-relaxed mb-6 text-gray-300">
-                                Hi, I'm Mohammed Tauif — a passionate and results-driven tech enthusiast with a strong foundation in <span class="text-blue-400 font-semibold">Data Science</span>, <span class="text-purple-400 font-semibold">C++</span>, <span class="text-green-400 font-semibold">SQL</span>, <span class="text-yellow-400 font-semibold">Power BI</span>, and <span class="text-pink-400 font-semibold">full-stack development</span>. With hands-on experience in building real-world projects, contributing to problem-solving platforms like LeetCode, and creating tools like Spend Wise, my goal is to build innovative, scalable, and impactful digital solutions.
-                            </p>
-                            <p class="text-xl leading-relaxed mb-6 text-gray-300">
-                                I hold a Master's degree in Computer Applications with a specialization in Data Science and have a deep interest in <span class="text-cyan-400 font-semibold">machine learning</span>, <span class="text-indigo-400 font-semibold">backend development</span>, and <span class="text-orange-400 font-semibold">system design</span>. I enjoy working on meaningful projects that not only solve problems but also add value to people's lives.
-                            </p>
-                            <p class="text-xl leading-relaxed mb-8 text-gray-300">
-                                I'm continuously learning and evolving, currently focusing on DSA using C++, open-source contributions for GSoC, and exploring cloud and big data technologies. My journey is driven by curiosity, discipline, and a commitment to creating tech that makes a difference.
-                            </p>
-                        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3>Let's Work Together</h3>
+                        <p>I'm always interested in new opportunities and exciting projects. Whether you need data analysis, visualization, or insights to drive your business forward, I'd love to hear from you.</p>
                         
-                        <!-- Skills Section -->
-                        <div class="mt-10">
-                            <h3 class="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Technical Skills</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div class="space-y-6">
-                                    <div class="glass-card p-4 rounded-xl">
-                                        <div class="flex justify-between mb-3">
-                                            <span class="font-semibold text-lg">C++</span>
-                                            <span class="text-sm text-blue-400 font-medium">90%</span>
-                                        </div>
-                                        <div class="w-full bg-gray-700 rounded-full h-3">
-                                            <div class="progress-bar h-3 rounded-full" style="--width: 90%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="glass-card p-4 rounded-xl">
-                                        <div class="flex justify-between mb-3">
-                                            <span class="font-semibold text-lg">Python</span>
-                                            <span class="text-sm text-green-400 font-medium">85%</span>
-                                        </div>
-                                        <div class="w-full bg-gray-700 rounded-full h-3">
-                                            <div class="progress-bar h-3 rounded-full" style="--width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="glass-card p-4 rounded-xl">
-                                        <div class="flex justify-between mb-3">
-                                            <span class="font-semibold text-lg">SQL</span>
-                                            <span class="text-sm text-purple-400 font-medium">80%</span>
-                                        </div>
-                                        <div class="w-full bg-gray-700 rounded-full h-3">
-                                            <div class="progress-bar h-3 rounded-full" style="--width: 80%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-6">
-                                    <div class="glass-card p-4 rounded-xl">
-                                        <div class="flex justify-between mb-3">
-                                            <span class="font-semibold text-lg">PowerBI</span>
-                                            <span class="text-sm text-yellow-400 font-medium">75%</span>
-                                        </div>
-                                        <div class="w-full bg-gray-700 rounded-full h-3">
-                                            <div class="progress-bar h-3 rounded-full" style="--width: 75%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="glass-card p-4 rounded-xl">
-                                        <div class="flex justify-between mb-3">
-                                            <span class="font-semibold text-lg">MongoDB</span>
-                                            <span class="text-sm text-green-400 font-medium">70%</span>
-                                        </div>
-                                        <div class="w-full bg-gray-700 rounded-full h-3">
-                                            <div class="progress-bar h-3 rounded-full" style="--width: 70%"></div>
-                                        </div>
-                                    </div>
-                                        <div class="flex justify-between mb-2">
-                                            <span class="font-medium">Pandas & NumPy</span>
-                                            <span class="text-sm opacity-75">80%</span>
-                                        </div>
-                                        <div class="w-full bg-gray-600 rounded-full h-2">
-                                            <div class="progress-bar h-2 rounded-full" style="--width: 65%"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                mohammedtauif208@gmail.com
                             </div>
                         </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong><br>
+                                +91 9119343797
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong><br>
+                                Lpu, Punjab, India
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/mohammed-tauif-776105248/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/tauif2026"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-kaggle"></i></a>
+                        </div>
                     </div>
-                </section>
+                </div>
                 
-                <!-- Projects Section -->
-                <section id="projects" class="section-fade">
-                    <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Projects</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="mb-4">
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" 
-                                     alt="Project 1" 
-                                     class="w-full h-48 object-cover rounded-lg mb-4">
-                            </div>
-                            <h3 class="text-xl font-bold mb-3">Credit Card Dashboard</h3>
-                            <p class="text-gray-300 mb-4">Created an interactive Power BI dashboard to analyze credit card transactions, customer demographics, and spending behavior using filters, KPIs, and custom visuals for actionable insights.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-300 rounded-full text-sm">Power BI</span>
-                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-300 rounded-full text-sm">MySql</span>
-                                <span class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-300 rounded-full text-sm">DAX</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt mr-2"></i>
-                                    Live Demo
-                                </a>
-                                <a href="https://github.com/tauif2026/Credit_Card_Financial-dashboard" target="_blank" class="flex items-center text-gray-400 hover:text-gray-300 transition-colors">
-                                    <i class="fab fa-github mr-2"></i>
-                                    Code
-                                </a>
-                            </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
                         </div>
-                        
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="mb-4">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop" 
-                                     alt="Project 2" 
-                                     class="w-full h-48 object-cover rounded-lg mb-4">
-                            </div>
-                            <h3 class="text-xl font-bold mb-3">Task Management App</h3>
-                            <p class="text-gray-300 mb-4">A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-300 rounded-full text-sm">Vue.js</span>
-                                <span class="px-3 py-1 bg-yellow-500 bg-opacity-20 text-yellow-300 rounded-full text-sm">Firebase</span>
-                                <span class="px-3 py-1 bg-red-500 bg-opacity-20 text-red-300 rounded-full text-sm">Socket.io</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt mr-2"></i>
-                                    Live Demo
-                                </a>
-                                <a href="#" class="flex items-center text-gray-400 hover:text-gray-300 transition-colors">
-                                    <i class="fab fa-github mr-2"></i>
-                                    Code
-                                </a>
-                            </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
                         </div>
-                        
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="mb-4">
-                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=200&fit=crop" 
-                                     alt="Project 3" 
-                                     class="w-full h-48 object-cover rounded-lg mb-4">
-                            </div>
-                            <h3 class="text-xl font-bold mb-3">Weather Analytics Dashboard</h3>
-                            <p class="text-gray-300 mb-4">A data visualization dashboard that displays weather patterns and analytics using Chart.js and real-time weather APIs.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-orange-500 bg-opacity-20 text-orange-300 rounded-full text-sm">Chart.js</span>
-                                <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-300 rounded-full text-sm">API Integration</span>
-                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-300 rounded-full text-sm">Express</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt mr-2"></i>
-                                    Live Demo
-                                </a>
-                                <a href="#" class="flex items-center text-gray-400 hover:text-gray-300 transition-colors">
-                                    <i class="fab fa-github mr-2"></i>
-                                    Code
-                                </a>
-                            </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject" required>
                         </div>
-                        
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="mb-4">
-                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=200&fit=crop" 
-                                     alt="Project 4" 
-                                     class="w-full h-48 object-cover rounded-lg mb-4">
-                            </div>
-                            <h3 class="text-xl font-bold mb-3">Social Media Platform</h3>
-                            <p class="text-gray-300 mb-4">A full-featured social media platform with user profiles, posts, comments, likes, and real-time messaging functionality.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-300 rounded-full text-sm">React</span>
-                                <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-300 rounded-full text-sm">GraphQL</span>
-                                <span class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-300 rounded-full text-sm">PostgreSQL</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt mr-2"></i>
-                                    Live Demo
-                                </a>
-                                <a href="#" class="flex items-center text-gray-400 hover:text-gray-300 transition-colors">
-                                    <i class="fab fa-github mr-2"></i>
-                                    Code
-                                </a>
-                            </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
                         </div>
-                    </div>
-                </section>
-                
-                <!-- Academic Section -->
-                <section id="academic" class="section-fade">
-                    <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Academic Background</h2>
-                    <div class="space-y-6">
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-graduation-cap text-2xl text-white"></i>
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2">Master of Science in Computer Science</h3>
-                                    <p class="text-blue-400 font-medium mb-2">Stanford University</p>
-                                    <p class="text-gray-400 mb-3">2020 - 2022 | GPA: 3.8/4.0</p>
-                                    <p class="text-gray-300">Specialized in Machine Learning and Software Engineering. Thesis on "Optimization of Deep Learning Models for Real-time Applications"</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-university text-2xl text-white"></i>
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2">Bachelor of Technology in Computer Science</h3>
-                                    <p class="text-green-400 font-medium mb-2">MIT</p>
-                                    <p class="text-gray-400 mb-3">2016 - 2020 | GPA: 3.9/4.0</p>
-                                    <p class="text-gray-300">Magna Cum Laude. Focus on Data Structures, Algorithms, and Software Development. President of Computer Science Student Association.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Experience Section -->
-                        <div class="mt-12">
-                            <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Professional Experience</h3>
-                            <div class="space-y-6">
-                                <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                                    <div class="flex items-start space-x-4">
-                                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <i class="fas fa-briefcase text-2xl text-white"></i>
-                                        </div>
-                                        <div class="flex-1">
-                                            <h4 class="text-xl font-bold mb-2">Senior Full Stack Developer</h4>
-                                            <p class="text-purple-400 font-medium mb-2">Tech Solutions Inc.</p>
-                                            <p class="text-gray-400 mb-3">Jan 2023 - Present</p>
-                                            <ul class="text-gray-300 space-y-1">
-                                                <li>• Led development of microservices architecture serving 1M+ users</li>
-                                                <li>• Improved application performance by 40% through optimization</li>
-                                                <li>• Mentored 5 junior developers and conducted technical interviews</li>
-                                                <li>• Implemented CI/CD pipelines reducing deployment time by 60%</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                                    <div class="flex items-start space-x-4">
-                                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <i class="fas fa-code text-2xl text-white"></i>
-                                        </div>
-                                        <div class="flex-1">
-                                            <h4 class="text-xl font-bold mb-2">Frontend Developer</h4>
-                                            <p class="text-blue-400 font-medium mb-2">StartupXYZ</p>
-                                            <p class="text-gray-400 mb-3">Jun 2021 - Dec 2022</p>
-                                            <ul class="text-gray-300 space-y-1">
-                                                <li>• Developed responsive web applications using React and Vue.js</li>
-                                                <li>• Collaborated with UI/UX designers to implement pixel-perfect designs</li>
-                                                <li>• Optimized web performance achieving 95+ Lighthouse scores</li>
-                                                <li>• Participated in agile development processes and code reviews</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- Certificates Section -->
-                <section id="certificates" class="section-fade">
-                    <h2 class="text-4xl font-bold mb-8 bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">Certifications</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-certificate text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold">AWS Certified Solutions Architect</h3>
-                                    <p class="text-gray-400">Amazon Web Services</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 mb-3">Professional level certification demonstrating expertise in designing distributed systems on AWS.</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm text-gray-400">Issued: March 2023</span>
-                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-certificate text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold">Google Cloud Professional</h3>
-                                    <p class="text-gray-400">Google Cloud Platform</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 mb-3">Advanced certification in cloud architecture and development on Google Cloud Platform.</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm text-gray-400">Issued: January 2023</span>
-                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-certificate text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold">MongoDB Certified Developer</h3>
-                                    <p class="text-gray-400">MongoDB University</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 mb-3">Certification in MongoDB database design, development, and administration.</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm text-gray-400">Issued: November 2022</span>
-                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-certificate text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold">React Professional Certificate</h3>
-                                    <p class="text-gray-400">Meta (Facebook)</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 mb-3">Advanced React development certification including hooks, context, and performance optimization.</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm text-gray-400">Issued: September 2022</span>
-                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-red-500 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-certificate text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold">Kubernetes Administrator</h3>
-                                    <p class="text-gray-400">Cloud Native Computing Foundation</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 mb-3">Certified Kubernetes Administrator (CKA) demonstrating skills in cluster management and deployment.</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm text-gray-400">Issued: July 2022</span>
-                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="card-hover bg-gray-700 rounded-2xl p-6 glow-effect">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-certificate text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold">Machine Learning Engineer</h3>
-                                    <p class="text-gray-400">Coursera & Stanford</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 mb-3">Comprehensive machine learning certification covering algorithms, neural networks, and deployment.</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm text-gray-400">Issued: May 2022</span>
-                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Call to Action -->
-                    <div class="mt-16 text-center">
-                        <div class="card-hover bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 glow-effect">
-                            <h3 class="text-2xl font-bold mb-4">Let's Work Together!</h3>
-                            <p class="text-lg mb-6 opacity-90">I'm always open to discussing new opportunities and exciting projects.</p>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a href="#" class="px-8 py-3 bg-white text-purple-600 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                                    Download Resume
-                                </a>
-                                <a href="#" class="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                                    Get In Touch
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                        <button type="submit" class="btn-primary-custom w-100">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mohammed Tauif. All rights reserved. Built with passion for data and insights.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    
-                    // Update active navigation
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('bg-white', 'bg-opacity-20');
-                    });
-                    this.classList.add('bg-white', 'bg-opacity-20');
-                }
+// Theme Management
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const body = document.body;
+
+// Check for saved theme preference or default to 'light'
+const currentTheme = localStorage.getItem('theme') || 'light';
+body.setAttribute('data-theme', currentTheme);
+
+// Update icon based on current theme
+function updateThemeIcon(theme) {
+    if (theme === 'dark') {
+        themeIcon.className = 'fas fa-sun';
+    } else {
+        themeIcon.className = 'fas fa-moon';
+    }
+}
+
+// Initialize icon
+updateThemeIcon(currentTheme);
+
+// Theme toggle functionality
+themeToggle.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+});
+
+// Initialize AOS
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 50,
+    easing: 'ease-out-cubic'
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.offsetTop;
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
-        });
+        }
+    });
+});
+
+// Navbar background change on scroll
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > 50) {
+        navbar.style.background = body.getAttribute('data-theme') === 'dark' 
+            ? 'rgba(13, 17, 23, 0.95)' 
+            : 'rgba(255, 255, 255, 0.95)';
+        navbar.style.backdropFilter = 'blur(12px)';
+    } else {
+        navbar.style.background = body.getAttribute('data-theme') === 'dark' 
+            ? 'rgba(13, 17, 23, 0.8)' 
+            : 'rgba(255, 255, 255, 0.8)';
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
+// Counter animation with intersection observer
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        const increment = target / 60;
+        let current = 0;
         
-        // Scroll progress indicator
-        window.addEventListener('scroll', () => {
-            const scrollProgress = document.getElementById('scrollProgress');
-            const scrollTop = window.pageYOffset;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            scrollProgress.style.transform = `scaleX(${scrollPercent / 100})`;
-        });
-        
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+        const updateCounter = () => {
+            if (current < target) {
+                current += increment;
+                counter.textContent = Math.ceil(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
         };
         
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('.section-fade').forEach(section => {
-            observer.observe(section);
-        });
-        
-        // Add active state to navigation based on scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let currentSection = '';
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 100 && rect.bottom >= 100) {
-                    currentSection = section.id;
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('bg-white', 'bg-opacity-20');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('bg-white', 'bg-opacity-20');
-                }
-            });
-        });
-        
-        // Animate progress bars when they come into view
-        const progressBars = document.querySelectorAll('.progress-bar');
-        const progressObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const bar = entry.target;
-                    const width = bar.style.getPropertyValue('--width');
-                    bar.style.width = width;
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        progressBars.forEach(bar => {
-            progressObserver.observe(bar);
-        });
-        
-        // Add floating animation delay to profile image
-        const profileImage = document.querySelector('.floating-animation');
-        if (profileImage) {
-            profileImage.style.animationDelay = '0.5s';
+        updateCounter();
+    });
+}
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            if (entry.target.classList.contains('stats')) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
         }
-        
-        // Add parallax effect to particles
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const particles = document.querySelectorAll('.particle');
-            
-            particles.forEach((particle, index) => {
-                const speed = 0.5 + (index * 0.1);
-                particle.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
-        
-        // Add typing animation restart on scroll
-        let typingElement = document.querySelector('.typing-animation');
-        if (typingElement) {
-            const restartTyping = () => {
-                typingElement.style.animation = 'none';
-                typingElement.offsetHeight; // Trigger reflow
-                typingElement.style.animation = 'typing 4s steps(40, end), blink-caret 0.75s step-end infinite';
-            };
-            
-            window.addEventListener('scroll', () => {
-                if (window.scrollY < 100) {
-                    restartTyping();
-                }
-            });
+    });
+}, observerOptions);
+
+// Observe stats section
+const statsSection = document.querySelector('.stats');
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
+// Animate skill progress bars
+function animateSkillBars() {
+    const progressBars = document.querySelectorAll('.progress-bar');
+    progressBars.forEach((bar, index) => {
+        const width = bar.getAttribute('data-width');
+        setTimeout(() => {
+            bar.style.width = width + '%';
+        }, index * 100);
+    });
+}
+
+// Skills section observer
+const skillsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateSkillBars();
+            skillsObserver.unobserve(entry.target);
         }
+    });
+}, observerOptions);
+
+const skillsSection = document.querySelector('#skills');
+if (skillsSection) {
+    skillsObserver.observe(skillsSection);
+}
+
+// Enhanced form submission
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const button = this.querySelector('button[type="submit"]');
+    const originalText = button.textContent;
+    
+    // Show loading state
+    button.textContent = 'Sending...';
+    button.disabled = true;
+    button.style.opacity = '0.7';
+    
+    // Simulate form submission
+    setTimeout(() => {
+        button.textContent = 'Message Sent!';
+        button.style.background = 'var(--secondary-color)';
         
-        // Add hover effect to cards
-        document.querySelectorAll('.card-hover').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'perspective(1000px) rotateX(5deg) translateY(-5px)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'perspective(1000px) rotateX(0deg) translateY(0px)';
-            });
-        });
-        
-        // Add click animation to buttons
-        document.querySelectorAll('a, button').forEach(element => {
-            element.addEventListener('click', function() {
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 100);
-            });
-        });
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = 'var(--accent-color)';
+            button.disabled = false;
+            button.style.opacity = '1';
+            this.reset();
+        }, 2000);
+    }, 1500);
+});
+
+// Fade-in animation for elements
+const fadeElements = document.querySelectorAll('.project-card, .timeline-item, .skill-category');
+
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in', 'visible');
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px'
+});
+
+fadeElements.forEach(element => {
+    element.classList.add('fade-in');
+    fadeObserver.observe(element);
+});
+
+// Active navigation link highlighting
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Keyboard navigation for accessibility
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+    }
+});
+
+document.addEventListener('mousedown', () => {
+    document.body.classList.remove('keyboard-navigation');
+});
+
+// Performance optimization: Debounce scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Apply debouncing to scroll-heavy functions
+const debouncedScrollHandler = debounce(() => {
+    // Additional scroll-based animations can go here
+}, 10);
+
+window.addEventListener('scroll', debouncedScrollHandler);
     </script>
 </body>
 </html>
-
